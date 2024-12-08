@@ -4,26 +4,21 @@ import hexlet.code.Cli;
 import hexlet.code.Engine;
 
 import java.util.Scanner;
+import java.util.stream.IntStream;
 
-public class GCD {
-    private static Integer getGCD(int first, int second) {
-        int r;
-        while (second != 0) {
-          r = first % second;
-          first = second;
-          second = r;
-        }
-
-        return first;
+public class Prime {
+    private static boolean isPrime(int number) {
+        return number > 1
+                && IntStream.rangeClosed(2, (int) Math.sqrt(number))
+                .noneMatch(n -> (number % n == 0));
     }
 
     private static String generateExercise() {
-        int firstNumber = (int) (Math.random() * 100);
-        int secondNumber = (int) (Math.random() * 100);
+        int randomNumber = 1 + (int) (Math.random() * 100);
 
-        System.out.println("Question: " + firstNumber + " " + secondNumber);
+        System.out.println("Question: " + randomNumber);
 
-        return getGCD(firstNumber, secondNumber) + "";
+        return isPrime(randomNumber) ? "yes" : "no";
     }
 
     public static void game() {
@@ -31,7 +26,7 @@ public class GCD {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Find the greatest common divisor of given numbers.");
+        System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
 
         String firstExerciseAnswer = generateExercise();
         boolean isFirstAnswerCorrect = Engine.getFeedback(firstExerciseAnswer, scanner.next(), userName);
