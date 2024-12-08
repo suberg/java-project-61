@@ -6,6 +6,8 @@ import hexlet.code.Engine;
 import java.util.Scanner;
 
 public class GCD {
+    private static final int UPPER_LIMIT = 100;
+
     private static Integer getGCD(int first, int second) {
         int r;
         while (second != 0) {
@@ -18,9 +20,8 @@ public class GCD {
     }
 
     private static String generateExercise() {
-        int oneHundred = 100;
-        int firstNumber = (int) (Math.random() * oneHundred);
-        int secondNumber = (int) (Math.random() * oneHundred);
+        int firstNumber = (int) (Math.random() * UPPER_LIMIT);
+        int secondNumber = (int) (Math.random() * UPPER_LIMIT);
 
         System.out.println("Question: " + firstNumber + " " + secondNumber);
 

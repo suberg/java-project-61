@@ -7,6 +7,8 @@ import java.util.Scanner;
 import java.util.stream.IntStream;
 
 public class Prime {
+    private static final int UPPER_LIMIT = 100;
+
     private static boolean isPrime(int number) {
         return number > 1
                 && IntStream.rangeClosed(2, (int) Math.sqrt(number))
@@ -14,8 +16,7 @@ public class Prime {
     }
 
     private static String generateExercise() {
-        int oneHundred = 100;
-        int randomNumber = 1 + (int) (Math.random() * oneHundred);
+        int randomNumber = 1 + (int) (Math.random() * UPPER_LIMIT);
 
         System.out.println("Question: " + randomNumber);
 

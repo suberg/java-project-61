@@ -8,17 +8,18 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Progression {
+    private static final int UPPER_LIMIT = 100;
+    private static final int NUMBERS_COUNT = 10;
+
     private static String generateProgression() {
-        int oneHundred = 100;
-        int numbersCount = 10;
-        int step = 1 + (int) (Math.random() * numbersCount);
-        int startNumber = (int) (Math.random() * oneHundred);
-        int hiddenNumberIndex = (int) (Math.random() * numbersCount);
+        int step = 1 + (int) (Math.random() * NUMBERS_COUNT);
+        int startNumber = (int) (Math.random() * UPPER_LIMIT);
+        int hiddenNumberIndex = (int) (Math.random() * NUMBERS_COUNT);
         List<Integer> allNumbers = new ArrayList<>();
 
         System.out.print("Question: ");
 
-        for (int i = 0; i < numbersCount; i++) {
+        for (int i = 0; i < NUMBERS_COUNT; i++) {
             int itemToAdd = startNumber + (step * i);
             allNumbers.add(itemToAdd);
 

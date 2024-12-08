@@ -6,6 +6,8 @@ import hexlet.code.Engine;
 import java.util.Scanner;
 
 public class Calc {
+    private static final int UPPER_LIMIT = 100;
+
     private enum OPERATIONS {
         SUM,
         DIFFERENCE,
@@ -14,10 +16,9 @@ public class Calc {
 
     private static String generateExpression() {
         int operationsCount = OPERATIONS.values().length;
-        int oneHundred = 100;
         OPERATIONS currentOperation = OPERATIONS.values()[(int) (Math.random() * operationsCount)];
-        int firstNumber = (int) (Math.random() * oneHundred);
-        int secondNumber = (int) (Math.random() * oneHundred);
+        int firstNumber = (int) (Math.random() * UPPER_LIMIT);
+        int secondNumber = (int) (Math.random() * UPPER_LIMIT);
 
         int answer = 0;
 
