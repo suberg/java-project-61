@@ -3,4 +3,8 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/7c55fb715db3e218f254/maintainability)](https://codeclimate.com/github/suberg/java-project-61/maintainability)
 
+## Even game
 [![asciicast](https://asciinema.org/a/qTpmSWTIuxyqtM8wJxcFY8wwK.svg)](https://asciinema.org/a/qTpmSWTIuxyqtM8wJxcFY8wwK)
+
+## Calc game
+[![asciicast](https://asciinema.org/a/1LPIIUCEOQZNIJizmKy9O42K3.svg)](https://asciinema.org/a/1LPIIUCEOQZNIJizmKy9O42K3)
