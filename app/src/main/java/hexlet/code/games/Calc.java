@@ -14,21 +14,20 @@ public class Calc {
 
     private static String generateExpression() {
         int operationsCount = OPERATIONS.values().length;
+        int oneHundred = 100;
         OPERATIONS currentOperation = OPERATIONS.values()[(int) (Math.random() * operationsCount)];
-        int firstNumber = (int) (Math.random() * 100);
-        int secondNumber = (int) (Math.random() * 100);
+        int firstNumber = (int) (Math.random() * oneHundred);
+        int secondNumber = (int) (Math.random() * oneHundred);
 
         int answer = 0;
 
         if (currentOperation.equals(OPERATIONS.SUM)) {
             System.out.println("Question: " + firstNumber + " + " + secondNumber);
             answer = firstNumber + secondNumber;
-        }
-        else if (currentOperation.equals(OPERATIONS.DIFFERENCE)) {
+        } else if (currentOperation.equals(OPERATIONS.DIFFERENCE)) {
             System.out.println("Question: " + firstNumber + " - " + secondNumber);
             answer = firstNumber - secondNumber;
-        }
-        else if (currentOperation.equals(OPERATIONS.MULTIPLICATION)) {
+        } else if (currentOperation.equals(OPERATIONS.MULTIPLICATION)) {
             System.out.println("Question: " + firstNumber + " * " + secondNumber);
             answer = firstNumber * secondNumber;
         }
@@ -45,15 +44,21 @@ public class Calc {
 
         String firstExpressionAnswer = generateExpression();
         boolean isFirstAnswerCorrect = Engine.getFeedback(firstExpressionAnswer, scanner.next(), userName);
-        if (!isFirstAnswerCorrect) return;
+        if (!isFirstAnswerCorrect) {
+            return;
+        }
 
         String secondExpressionAnswer = generateExpression();
         boolean isSecondAnswerCorrect = Engine.getFeedback(secondExpressionAnswer, scanner.next(), userName);
-        if (!isSecondAnswerCorrect) return;
+        if (!isSecondAnswerCorrect) {
+            return;
+        }
 
         String thirdExpressionAnswer = generateExpression();
         boolean isThirdAnswerCorrect = Engine.getFeedback(thirdExpressionAnswer, scanner.next(), userName);
-        if (!isThirdAnswerCorrect) return;
+        if (!isThirdAnswerCorrect) {
+            return;
+        }
 
         Engine.congratulateUser(userName);
     }

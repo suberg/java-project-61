@@ -14,15 +14,21 @@ public class Even {
 
         System.out.println("Question: 15");
         boolean isFirstAnswerCorrect = Engine.getFeedback("no", scanner.next(), userName);
-        if (!isFirstAnswerCorrect) return;
+        if (!isFirstAnswerCorrect) {
+            return;
+        }
 
         System.out.println("Question: 6");
         boolean isSecondAnswerCorrect = Engine.getFeedback("yes", scanner.next(), userName);
-        if (!isSecondAnswerCorrect) return;
+        if (!isSecondAnswerCorrect) {
+            return;
+        }
 
         System.out.println("Question: 7");
         boolean isThirdAnswerCorrect = Engine.getFeedback("no", scanner.next(), userName);
-        if (!isThirdAnswerCorrect) return;
+        if (!isThirdAnswerCorrect) {
+            return;
+        }
 
         Engine.congratulateUser(userName);
     }

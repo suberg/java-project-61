@@ -9,17 +9,18 @@ public class GCD {
     private static Integer getGCD(int first, int second) {
         int r;
         while (second != 0) {
-          r = first % second;
-          first = second;
-          second = r;
+            r = first % second;
+            first = second;
+            second = r;
         }
 
         return first;
     }
 
     private static String generateExercise() {
-        int firstNumber = (int) (Math.random() * 100);
-        int secondNumber = (int) (Math.random() * 100);
+        int oneHundred = 100;
+        int firstNumber = (int) (Math.random() * oneHundred);
+        int secondNumber = (int) (Math.random() * oneHundred);
 
         System.out.println("Question: " + firstNumber + " " + secondNumber);
 
@@ -35,15 +36,21 @@ public class GCD {
 
         String firstExerciseAnswer = generateExercise();
         boolean isFirstAnswerCorrect = Engine.getFeedback(firstExerciseAnswer, scanner.next(), userName);
-        if (!isFirstAnswerCorrect) return;
+        if (!isFirstAnswerCorrect) {
+            return;
+        }
 
         String secondExerciseAnswer = generateExercise();
         boolean isSecondAnswerCorrect = Engine.getFeedback(secondExerciseAnswer, scanner.next(), userName);
-        if (!isSecondAnswerCorrect) return;
+        if (!isSecondAnswerCorrect) {
+            return;
+        }
 
         String thirdExerciseAnswer = generateExercise();
         boolean isThirdAnswerCorrect = Engine.getFeedback(thirdExerciseAnswer, scanner.next(), userName);
-        if (!isThirdAnswerCorrect) return;
+        if (!isThirdAnswerCorrect) {
+            return;
+        }
 
         Engine.congratulateUser(userName);
     }

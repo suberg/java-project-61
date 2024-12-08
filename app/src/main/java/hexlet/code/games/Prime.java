@@ -14,7 +14,8 @@ public class Prime {
     }
 
     private static String generateExercise() {
-        int randomNumber = 1 + (int) (Math.random() * 100);
+        int oneHundred = 100;
+        int randomNumber = 1 + (int) (Math.random() * oneHundred);
 
         System.out.println("Question: " + randomNumber);
 
@@ -30,15 +31,21 @@ public class Prime {
 
         String firstExerciseAnswer = generateExercise();
         boolean isFirstAnswerCorrect = Engine.getFeedback(firstExerciseAnswer, scanner.next(), userName);
-        if (!isFirstAnswerCorrect) return;
+        if (!isFirstAnswerCorrect) {
+            return;
+        }
 
         String secondExerciseAnswer = generateExercise();
         boolean isSecondAnswerCorrect = Engine.getFeedback(secondExerciseAnswer, scanner.next(), userName);
-        if (!isSecondAnswerCorrect) return;
+        if (!isSecondAnswerCorrect) {
+            return;
+        }
 
         String thirdExerciseAnswer = generateExercise();
         boolean isThirdAnswerCorrect = Engine.getFeedback(thirdExerciseAnswer, scanner.next(), userName);
-        if (!isThirdAnswerCorrect) return;
+        if (!isThirdAnswerCorrect) {
+            return;
+        }
 
         Engine.congratulateUser(userName);
     }
