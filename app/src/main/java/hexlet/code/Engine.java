@@ -2,7 +2,7 @@ package hexlet.code;
 
 public class Engine {
     public static boolean getFeedback(String rightAnswer, String currentAnswer, String userName) {
-        boolean isUserAnsweredCorrectly = rightAnswer.equals(currentAnswer);
+        boolean isUserAnsweredCorrectly = rightAnswer.equals(currentAnswer.trim());
 
         System.out.println("Your answer: " + currentAnswer);
         if (isUserAnsweredCorrectly) {

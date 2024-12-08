@@ -10,3 +10,6 @@
 
 #### Greatest common divisor
 [![asciicast](https://asciinema.org/a/Z4elVhRxIeFSVVgnpnPMN2h6I.svg)](https://asciinema.org/a/Z4elVhRxIeFSVVgnpnPMN2h6I)
+
+#### Progression
+[![asciicast](https://asciinema.org/a/DZgJ7yMU7n0H2bHvVQdvQxVyM.svg)](https://asciinema.org/a/DZgJ7yMU7n0H2bHvVQdvQxVyM)

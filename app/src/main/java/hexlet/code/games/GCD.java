@@ -33,37 +33,18 @@ public class GCD {
 
         System.out.println("Find the greatest common divisor of given numbers.");
 
-        String firstExcerciseAnswer = generateExcercise();
-        boolean isFirstAnswerCorrect = Engine.getFeedback(firstExcerciseAnswer, scanner.next(), userName);
+        String firstExerciseAnswer = generateExcercise();
+        boolean isFirstAnswerCorrect = Engine.getFeedback(firstExerciseAnswer, scanner.next(), userName);
         if (!isFirstAnswerCorrect) return;
 
-        String secondExcerciseAnswer = generateExcercise();
-        boolean isSecondAnswerCorrect = Engine.getFeedback(secondExcerciseAnswer, scanner.next(), userName);
+        String secondExerciseAnswer = generateExcercise();
+        boolean isSecondAnswerCorrect = Engine.getFeedback(secondExerciseAnswer, scanner.next(), userName);
         if (!isSecondAnswerCorrect) return;
 
-        String thirdExcerciseAnswer = generateExcercise();
-        boolean isThirdAnswerCorrect = Engine.getFeedback(thirdExcerciseAnswer, scanner.next(), userName);
+        String thirdExerciseAnswer = generateExcercise();
+        boolean isThirdAnswerCorrect = Engine.getFeedback(thirdExerciseAnswer, scanner.next(), userName);
         if (!isThirdAnswerCorrect) return;
 
         Engine.congratulateUser(userName);
     }
 }
-
-
-//count = Math.min(x, y);
-//
-// for (int n = count; n >= 1; n--) {
-//    if (x % n == 0 && y % n == 0){
-//          count = n;
-//          break;
-//    }
-// }
-
-
-//int r;
-//while (y != 0) {
-//  r = i % y;
-//  i = y;
-//  y = r;
-//}
-//System.out.println(i);
