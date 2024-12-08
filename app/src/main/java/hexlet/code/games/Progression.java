@@ -12,7 +12,7 @@ public class Progression {
         int numbersCount = 10;
         int step = 1 + (int) (Math.random() * 10);
         int startNumber = (int) (Math.random() * 100);
-        int hiddenNumberIndex = 1 + (int) (Math.random() * 10);
+        int hiddenNumberIndex = (int) (Math.random() * 10);
         List<Integer> allNumbers = new ArrayList<>();
 
         System.out.print("Question: ");
